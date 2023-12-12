@@ -12,6 +12,7 @@
             <form>
               <div class="form-group">
                 <input
+                  name="nama"
                   type="text"
                   class="form-control border-0 p-4"
                   placeholder="Masukkan Nama"
@@ -19,15 +20,21 @@
                 />
               </div>
               <div class="form-group">
-                <input
-                  type="email"
-                  class="form-control border-0 p-4"
-                  placeholder="Masukkan Umur"
-                  required="required"
-                />
+                <select
+                  name="status"
+                  class="custom-select border-0 px-4"
+                  style="height: 47px"
+                >
+                  <option selected>Status</option>
+                  <option value="1">Muda</option>
+                  <option value="1">Parobaya</option>
+                  <option value="2">Lansia</option>
+                  <option value="2">Janda</option>
+                </select>
               </div>
               <div class="form-group">
                 <select
+                  name="atap"
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
@@ -38,6 +45,7 @@
               </div>
               <div class="form-group">
                 <select
+                  name="dinding"
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
@@ -52,6 +60,7 @@
               </div>
               <div class="form-group">
                 <select
+                  name="lantai"
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
@@ -64,6 +73,7 @@
               </div>
               <div class="form-group">
                 <select
+                  name="listrik"
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
@@ -74,6 +84,7 @@
               </div>
               <div class="form-group">
                 <select
+                  name="kwh"
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
@@ -85,6 +96,7 @@
               </div>
               <div class="form-group">
                 <input
+                  name="pekerjaan_suami"
                   type="text"
                   class="form-control border-0 p-4"
                   placeholder="Masukkan Pekerjaan Suami"
@@ -93,6 +105,7 @@
               </div>
               <div class="form-group">
                 <input
+                  name="gaji_suami"
                   type="number"
                   class="form-control border-0 p-4"
                   placeholder="Penghasilan Suami (Rp)"
@@ -101,6 +114,7 @@
               </div>
               <div class="form-group">
                 <input
+                  name="gaji_istri"
                   type="number"
                   class="form-control border-0 p-4"
                   placeholder="Penghasilan Istri (Rp)"
@@ -109,6 +123,7 @@
               </div>
               <div class="form-group">
                 <input
+                  name="jumlah_tanggungan"
                   type="number"
                   class="form-control border-0 p-4"
                   placeholder="Jumlah Tanggungan"
@@ -117,6 +132,7 @@
               </div>
               <div>
                 <button
+                  name="btn_add"
                   class="btn btn-secondary btn-block border-0 py-3"
                   type="submit"
                 >

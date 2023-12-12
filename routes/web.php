@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MasyarakatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('v_home');
 });
 
-Route::get('/add', function () {
-    return view('v_add');
-});
+Route::get('/add',[MasyarakatController::class,'add']);
