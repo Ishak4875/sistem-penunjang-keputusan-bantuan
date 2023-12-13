@@ -1,6 +1,14 @@
 @extends('layout.v_layout')
 @section('content')
 
+@if (session('success'))
+  <script>
+    $(function () { //ready
+      toastr.success("{{session('success')}}");
+    });
+  </script>  
+@endif
+
 <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
   <div class="row align-items-center px-3">
     <div class="col-lg-6 text-center text-lg-left">
@@ -83,7 +91,7 @@
     <div class="row">
       <div class="col mb-5">
         <div class="d-flex flex-row-reverse mb-3">
-          <a class="btn btn-primary" href="/add" role="button">Tambah</a>
+          <a class="btn btn-primary" href="/masyarakat/add" role="button">Tambah</a>
         </div>
         <div class="card border-0 bg-light shadow-sm pb-2">
             <table class="table">
@@ -91,38 +99,27 @@
                   <tr>
                     <th scope="col"></th>
                     <th scope="col">Nama</th>
-                    <th scope="col">Last</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Gaji Suami</th>
+                    <th scope="col">Gaji Istri</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                      <a class="btn btn-warning" href="#" role="button">Ubah</a>
-                      <a class="btn btn-danger" href="#" role="button">Hapus</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>
-                      <a class="btn btn-warning" href="#" role="button">Ubah</a>
-                      <a class="btn btn-danger" href="#" role="button">Hapus</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>
-                      <a class="btn btn-warning" href="#" role="button">Ubah</a>
-                      <a class="btn btn-danger" href="#" role="button">Hapus</a>
-                    </td>
-                  </tr>
+                  @foreach ($masyarakat as $data)
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>{{$data->nama}}</td>
+                      <td>{{$data->status}}</td>
+                      <td>{{$data->gaji_suami}}</td>
+                      <td>{{$data->gaji_istri}}</td>
+                      <td>
+                        <a class="btn btn-info" href="/masyarakat/detail/{{$data->id_masyarakat}}" role="button">Detail</a>
+                        <a class="btn btn-warning" href="/masyarakat/edit/{{$data->id_masyarakat}}" role="button">Ubah</a>
+                        <a class="btn btn-danger" href="#" role="button">Hapus</a>
+                      </td>
+                    </tr>
+                  @endforeach
                 </tbody>
             </table>
         </div>

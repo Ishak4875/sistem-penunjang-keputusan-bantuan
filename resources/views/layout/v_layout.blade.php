@@ -29,9 +29,11 @@
     <!-- Libraries Stylesheet -->
     <link href="{{asset('template/')}}/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="{{asset('template/')}}/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{asset('template/')}}/css/style.css" rel="stylesheet" />
+    <script src="{{asset('js/jquery-3.6.3.min.js')}}"></script>
+    <script src="{{ asset('js/toastr.min.js')}}"></script>
+    <link href="{{ asset('css/toastr.min.css')}}" rel="stylesheet" />
   </head>
 
   <body>
@@ -75,7 +77,7 @@
     ></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> --}}
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('template/')}}/lib/easing/easing.min.js"></script>
     <script src="{{asset('template/')}}/lib/owlcarousel/owl.carousel.min.js"></script>

@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('v_home');
-});
-
-Route::get('/add',[MasyarakatController::class,'add']);
+Route::get('/',[MasyarakatController::class,'index'])->name('home');
+Route::get('/masyarakat/add',[MasyarakatController::class,'displayPageAdd']);
+Route::post('/masyarakat/insert',[MasyarakatController::class,'insert']);

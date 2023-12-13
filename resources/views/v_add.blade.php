@@ -1,6 +1,14 @@
 @extends('layout.v_layout')
 @section('content')
 
+@if (session('error'))
+  <script>
+    $(function () { //ready
+      toastr.error("{{session('error')}}");
+    });
+  </script>  
+@endif
+
 <!-- Class Start -->
 <div class="container-fluid pt-5">
     <div class="col">
@@ -9,13 +17,14 @@
             <h1 class="text-white m-0">Tambah Data</h1>
           </div>
           <div class="card-body rounded-bottom bg-primary p-5">
-            <form>
+            <form action="/masyarakat/insert" method="POST" enctype="multipart/form-data">
+              @csrf
               <div class="form-group">
                 <input
                   name="nama"
                   type="text"
                   class="form-control border-0 p-4"
-                  placeholder="Masukkan Nama"
+                  placeholder="Nama"
                   required="required"
                 />
               </div>
@@ -25,11 +34,11 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option selected>Status</option>
-                  <option value="1">Muda</option>
-                  <option value="1">Parobaya</option>
-                  <option value="2">Lansia</option>
-                  <option value="2">Janda</option>
+                  <option value="Status">Status</option>
+                  <option value="Muda">Muda</option>
+                  <option value="Parobaya">Parobaya</option>
+                  <option value="Lansia">Lansia</option>
+                  <option value="Duda/Janda">Duda/Janda</option>
                 </select>
               </div>
               <div class="form-group">
@@ -38,9 +47,9 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option selected>Atap</option>
-                  <option value="1">Seng Bagus</option>
-                  <option value="2">Seng Karatan</option>
+                  <option value="Atap">Atap</option>
+                  <option value="Seng Bagus">Seng Bagus</option>
+                  <option value="Seng Karatan">Seng Karatan</option>
                 </select>
               </div>
               <div class="form-group">
@@ -49,13 +58,13 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option selected>Dinding</option>
-                  <option value="1">Tembok Kualitas Rendah</option>
-                  <option value="2">Asbes</option>
-                  <option value="2">Tembok Bagus</option>
-                  <option value="2">Papan</option>
-                  <option value="2">Tembok Berlumut</option>
-                  <option value="2">Tembok Belum Diplester</option>
+                  <option value="Dinding">Dinding</option>
+                  <option value="Tembok Kualitas Rendah">Tembok Kualitas Rendah</option>
+                  <option value="Asbes">Asbes</option>
+                  <option value="Tembok Bagus">Tembok Bagus</option>
+                  <option value="Papan">Papan</option>
+                  <option value="Tembok Berlumut">Tembok Berlumut</option>
+                  <option value="Tembok Belum Diplester">Tembok Belum Diplester</option>
                 </select>
               </div>
               <div class="form-group">
@@ -64,11 +73,11 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option selected>Lantai</option>
-                  <option value="1">Semen</option>
-                  <option value="2">Tanah</option>
-                  <option value="2">Tehel</option>
-                  <option value="2">Papan</option>
+                  <option value="Lantai">Lantai</option>
+                  <option value="Semen">Semen</option>
+                  <option value="Tanah">Tanah</option>
+                  <option value="Tehel">Tehel</option>
+                  <option value="Papan">Papan</option>
                 </select>
               </div>
               <div class="form-group">
@@ -77,29 +86,26 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option selected>Listrik</option>
-                  <option value="1">PLN</option>
-                  <option value="2">Pulsa</option>
+                  <option value="Listrik">Listrik</option>
+                  <option value="PLN">PLN</option>
+                  <option value="Pulsa">Pulsa</option>
                 </select>
               </div>
               <div class="form-group">
-                <select
+                <input
                   name="kwh"
-                  class="custom-select border-0 px-4"
-                  style="height: 47px"
-                >
-                  <option selected>Kwh</option>
-                  <option value="1">450</option>
-                  <option value="1">900</option>
-                  <option value="2">1200</option>
-                </select>
+                  type="number"
+                  class="form-control border-0 p-4"
+                  placeholder="Kwh"
+                  required="required"
+                />
               </div>
               <div class="form-group">
                 <input
                   name="pekerjaan_suami"
                   type="text"
                   class="form-control border-0 p-4"
-                  placeholder="Masukkan Pekerjaan Suami"
+                  placeholder="Pekerjaan Suami"
                   required="required"
                 />
               </div>
