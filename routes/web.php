@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[MasyarakatController::class,'index'])->name('home');
 Route::get('/masyarakat/add',[MasyarakatController::class,'displayPageAdd']);
 Route::post('/masyarakat/insert',[MasyarakatController::class,'insert']);
+Route::get('/masyarakat/detail/{id_masyarakat}',[MasyarakatController::class,'getDetail']);
+Route::get('/masyarakat/edit/{id_masyarakat}',[MasyarakatController::class,'displayPageEdit']);
+Route::post('/masyarakat/update/{id_masyarakat}',[MasyarakatController::class,'update']);

@@ -14,21 +14,22 @@ class MasyarakatModel extends Model
             ->get();
     }
 
-    public function insertMasyarakat($data_masyarakat, $data_gaji_suami, 
-        $data_gaji_istri, $data_kwh, $jumlah_tanggungan){
+    public function getDetailMasyarakat($id_masyarakat)
+    {
+        return DB::table('tbl_masyarakat')
+            ->where('tbl_masyarakat.id_masyarakat',$id_masyarakat)
+            ->first();
+    }
+
+    public function insertMasyarakat($data_masyarakat){
         DB::table('tbl_masyarakat')
             ->insert($data_masyarakat);
+    }
 
-        DB::table('tbl_jumlah_tanggungan')
-            ->insert($jumlah_tanggungan);
-
-        DB::table('tbl_gaji_suami')
-            ->insert($data_gaji_suami);
-
-        DB::table('tbl_kwh')
-            ->insert($data_kwh);
-
-        DB::table('tbl_gaji_istri')
-            ->insert($data_gaji_istri);        
+    public function updateMasyarakat($id_masyarakat,$data_masyarakat)
+    {
+        DB::table('tbl_masyarakat')
+            ->where('id_masyarakat',$id_masyarakat)
+            ->update($data_masyarakat);
     }
 }

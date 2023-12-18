@@ -97,7 +97,7 @@
             <table class="table">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col"></th>
+                    <th scope="col">No.</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Status</th>
                     <th scope="col">Gaji Suami</th>
@@ -106,9 +106,12 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <?php
+                    $no = 1;  
+                  ?>
                   @foreach ($masyarakat as $data)
                     <tr>
-                      <th scope="row">1</th>
+                      <th scope="row">{{$no++}}</th>
                       <td>{{$data->nama}}</td>
                       <td>{{$data->status}}</td>
                       <td>{{$data->gaji_suami}}</td>
@@ -116,7 +119,9 @@
                       <td>
                         <a class="btn btn-info" href="/masyarakat/detail/{{$data->id_masyarakat}}" role="button">Detail</a>
                         <a class="btn btn-warning" href="/masyarakat/edit/{{$data->id_masyarakat}}" role="button">Ubah</a>
-                        <a class="btn btn-danger" href="#" role="button">Hapus</a>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modaldelete{{$data->id_masyarakat}}">
+                          Hapus
+                        </button>
                       </td>
                     </tr>
                   @endforeach
@@ -129,4 +134,25 @@
 </div>
 <!-- Class End -->
 
+@foreach ($masyarakat as $data)
+  <div class="modal fade" id="modaldelete{{$data->id_masyarakat}}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title text-white" id="exampleModalCenterTitle">{{$data->nama}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-danger">
+          Apakah anda yakin ingin menghapus data ini?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+          <button type="button" class="btn btn-danger">Ya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+@endforeach
 @endsection
