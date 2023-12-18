@@ -11,7 +11,7 @@ class MasyarakatModel extends Model
     public function getAllMasyarakat()
     {
         return DB::table('tbl_masyarakat')
-            ->get();
+            ->paginate(5);
     }
 
     public function getDetailMasyarakat($id_masyarakat)
@@ -31,5 +31,12 @@ class MasyarakatModel extends Model
         DB::table('tbl_masyarakat')
             ->where('id_masyarakat',$id_masyarakat)
             ->update($data_masyarakat);
+    }
+
+    public function deleteMasyarakat($id_masyarakat)
+    {
+        DB::table('tbl_masyarakat')
+            ->where('id_masyarakat',$id_masyarakat)
+            ->delete();
     }
 }

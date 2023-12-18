@@ -20,3 +20,4 @@ Route::post('/masyarakat/insert',[MasyarakatController::class,'insert']);
 Route::get('/masyarakat/detail/{id_masyarakat}',[MasyarakatController::class,'getDetail']);
 Route::get('/masyarakat/edit/{id_masyarakat}',[MasyarakatController::class,'displayPageEdit']);
 Route::post('/masyarakat/update/{id_masyarakat}',[MasyarakatController::class,'update']);
+Route::get('/masyarakat/delete/{id_masyarakat}',[MasyarakatController::class,'delete']);

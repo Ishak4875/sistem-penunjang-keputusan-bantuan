@@ -34,6 +34,7 @@
     <script src="{{asset('js/jquery-3.6.3.min.js')}}"></script>
     <script src="{{ asset('js/toastr.min.js')}}"></script>
     <link href="{{ asset('css/toastr.min.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/animate.min.css')}}" rel="stylesheet" />
   </head>
 
   <body>

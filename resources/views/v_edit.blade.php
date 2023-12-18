@@ -66,6 +66,7 @@
                   <option value="Papan" {{$masyarakat->dinding == 'Papan' ? 'selected' : ''}}>Papan</option>
                   <option value="Tembok Berlumut" {{$masyarakat->dinding == 'Tembok Berlumut' ? 'selected' : ''}}>Tembok Berlumut</option>
                   <option value="Tembok Belum Diplester" {{$masyarakat->dinding == 'Tembok Belum Diplester' ? 'selected' : ''}}>Tembok Belum Diplester</option>
+                  <option value="Kalsiboard" {{$masyarakat->dinding == 'Kalsiboard' ? 'selected' : ''}}>Kalsiboard</option>
                 </select>
               </div>
               <div class="form-group">
@@ -89,6 +90,7 @@
                 >
                   <option value="Listrik">Listrik</option>
                   <option value="PLN" {{$masyarakat->listrik == 'PLN' ? 'selected' : ''}}>PLN</option>
+                  <option value="PLN (Pulsa)" {{$masyarakat->listrik == 'PLN (Pulsa)' ? 'selected' : ''}}>PLN (Pulsa)</option>
                   <option value="Pulsa" {{$masyarakat->listrik == 'Pulsa' ? 'selected' : ''}}>Pulsa</option>
                 </select>
               </div>
@@ -107,6 +109,16 @@
                   name="pekerjaan_suami"
                   type="text"
                   value="{{$masyarakat->pekerjaan_suami}}"
+                  class="form-control border-0 p-4"
+                  placeholder="Pekerjaan Suami"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="pekerjaan_suami"
+                  type="text"
+                  value="{{$masyarakat->pekerjaan_istri}}"
                   class="form-control border-0 p-4"
                   placeholder="Pekerjaan Suami"
                   required="required"

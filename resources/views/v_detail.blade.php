@@ -56,6 +56,11 @@
                 <th scope="col">{{$masyarakat->pekerjaan_suami}}</th>
               </tr>
               <tr class="table-primary">
+                <th scope="col">Pekerjaan Istri</th>
+                <th scope="">:</th>
+                <th scope="col">{{$masyarakat->pekerjaan_istri}}</th>
+              </tr>
+              <tr class="table-primary">
                 <th scope="col">Total Penghasilan Keluarga</th>
                 <th scope="">:</th>
                 <th scope="col">{{$masyarakat->total_pendapatan}}</th>

@@ -65,6 +65,7 @@
                   <option value="Papan">Papan</option>
                   <option value="Tembok Berlumut">Tembok Berlumut</option>
                   <option value="Tembok Belum Diplester">Tembok Belum Diplester</option>
+                  <option value="Kalsiboard">Kalsiboard</option>
                 </select>
               </div>
               <div class="form-group">
@@ -88,6 +89,7 @@
                 >
                   <option value="Listrik">Listrik</option>
                   <option value="PLN">PLN</option>
+                  <option value="PLN (Subsidi)">PLN (Subsidi)</option>
                   <option value="Pulsa">Pulsa</option>
                 </select>
               </div>
@@ -106,6 +108,15 @@
                   type="text"
                   class="form-control border-0 p-4"
                   placeholder="Pekerjaan Suami"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="pekerjaan_istri"
+                  type="text"
+                  class="form-control border-0 p-4"
+                  placeholder="Pekerjaan Istri"
                   required="required"
                 />
               </div>

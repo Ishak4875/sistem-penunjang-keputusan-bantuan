@@ -56,6 +56,7 @@ class MasyarakatController extends Controller
         $listrik = $request->listrik;
         $kwh = $request->kwh;
         $pekerjaan_suami = $request->pekerjaan_suami;
+        $pekerjaan_istri = $request->pekerjaan_istri;
         $gaji_suami = $request->gaji_suami;
         $gaji_istri = $request->gaji_istri;
         $jumlah_tanggungan = $request->jumlah_tanggungan;
@@ -146,6 +147,7 @@ class MasyarakatController extends Controller
             'kwh_kecil'=>$kwh_kecil,
             'kwh_besar'=>$kwh_besar,
             'pekerjaan_suami'=>$pekerjaan_suami,
+            'pekerjaan_istri'=>$pekerjaan_istri,
             'gaji_suami'=>$gaji_suami,
             'gaji_istri'=>$gaji_istri,
             'total_pendapatan'=>$total_pendapatan,
@@ -180,6 +182,7 @@ class MasyarakatController extends Controller
         $listrik = $request->listrik;
         $kwh = $request->kwh;
         $pekerjaan_suami = $request->pekerjaan_suami;
+        $pekerjaan_istri = $request->pekerjaan_istri;
         $gaji_suami = $request->gaji_suami;
         $gaji_istri = $request->gaji_istri;
         $jumlah_tanggungan = $request->jumlah_tanggungan;
@@ -270,6 +273,7 @@ class MasyarakatController extends Controller
             'kwh_kecil'=>$kwh_kecil,
             'kwh_besar'=>$kwh_besar,
             'pekerjaan_suami'=>$pekerjaan_suami,
+            'pekerjaan_istri'=>$pekerjaan_istri,
             'gaji_suami'=>$gaji_suami,
             'gaji_istri'=>$gaji_istri,
             'total_pendapatan'=>$total_pendapatan,
@@ -284,6 +288,17 @@ class MasyarakatController extends Controller
         try {
             $this->MasyarakatModel->updateMasyarakat($id_masyarakat,$data_masyarakat);
             
+            return redirect()->route('home')->with('success','Data Berhasil Diperabarui');
+        } catch (\Throwable $th) {
+            $pesan_error = $th->getMessage();
+            return back()->with('error','Data Gagal Diperbarui');
+        }
+    }
+
+    public function delete($id_masyarakat)
+    {
+        try {
+            $this->MasyarakatModel->deleteMasyarakat($id_masyarakat);
             return redirect()->route('home')->with('success','Data Berhasil Diperabarui');
         } catch (\Throwable $th) {
             $pesan_error = $th->getMessage();

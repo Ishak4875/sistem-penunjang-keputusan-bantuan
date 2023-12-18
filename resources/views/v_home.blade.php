@@ -25,7 +25,7 @@
       <a href="" class="btn btn-secondary mt-1 py-3 px-5">Lihat Rangking</a>
     </div>
     <div class="col-lg-6 text-center text-lg-right">
-      <img class="img-fluid mt-5" src="{{asset('gambar/')}}/penerima bantuan.png" alt="" />
+      <img class="img-fluid mt-5 animated slideInRight" src="{{asset('gambar/')}}/penerima bantuan.png" alt="" />
     </div>
   </div>
 </div>
@@ -127,6 +127,9 @@
                   @endforeach
                 </tbody>
             </table>
+            <div class="d-flex justify-content-center">
+              {{$masyarakat->links()}}
+            </div>
         </div>
       </div>
     </div>
@@ -149,7 +152,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
-          <button type="button" class="btn btn-danger">Ya</button>
+          <a href="/masyarakat/delete/{{$data->id_masyarakat}}" class="btn btn-danger">Ya</a>
         </div>
       </div>
     </div>
