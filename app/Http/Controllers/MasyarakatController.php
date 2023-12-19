@@ -14,7 +14,10 @@ class MasyarakatController extends Controller
 
     public function index(){
         $data = [
-            'masyarakat'=>$this -> MasyarakatModel -> getAllMasyarakat()
+            'masyarakat'=>$this -> MasyarakatModel -> getAllMasyarakat(),
+            'jumlah_penduduk'=>$this -> MasyarakatModel -> getJumlahMasyarakat(),
+            'pendapatan_terendah'=>$this -> MasyarakatModel -> getPendapatanTerendah(),
+            'pendapatan_tertinggi'=>$this -> MasyarakatModel -> getPendapatanTertinggi()
         ];
         return view('v_home',$data);
     }
@@ -52,6 +55,44 @@ class MasyarakatController extends Controller
             'rangking'=>$this->MasyarakatModel->getRangking()
         ];
         return view('v_rangking',$data);
+    }
+
+    public function displayPageSearch()
+    {
+        return view('v_search');
+    }
+
+    public function search(Request $request)
+    {
+        $nama = $request->nama ?? '';
+        $status = $request->status ?? '';
+        $atap = $request->atap ?? '';
+        $dinding = $request->dinding ?? '';
+        $lantai = $request->lantai ?? '';
+        $listrik = $request->listrik ?? '';
+        $pekerjaan_suami = $request->pekerjaan_suami ?? '';
+        $pekerjaan_istri = $request->pekerjaan_istri ?? '';
+        $kategori_kelayakan = $request->kategori_kelayakan ?? '';
+
+        $status = $status == "Status" ? "" : $status;
+        $atap = $atap == "Atap" ? "" : $atap;
+        $dinding = $dinding == "Dinding" ? "" : $dinding;
+        $lantai = $lantai == "Lantai" ? "" : $lantai;
+        $listrik = $listrik == "Listrik" ? "" : $listrik;
+        $kategori_kelayakan = $kategori_kelayakan == "Kategori Kelayakan" ? "" : $kategori_kelayakan;
+
+        $data = [];
+        try {
+            $data = [
+                'rangking'=>$this->MasyarakatModel->searchAllKategori($nama,$status,$atap,$dinding,$lantai,$listrik,$pekerjaan_suami,$pekerjaan_istri,$kategori_kelayakan)
+            ];
+        } catch (\Throwable $th) {
+            $pesan_error = $th->getMessage();
+            var_dump($pesan_error);
+            die;
+            return back()->with('error','Data Gagal Dicari');
+        }
+        return view('v_search_result',$data);
     }
 
     public function insert(Request $request)
@@ -169,12 +210,9 @@ class MasyarakatController extends Controller
 
         try {
             $this->MasyarakatModel->insertMasyarakat($data_masyarakat);
-            
             return redirect()->route('home')->with('success','Data Berhasil Ditambahkan');
         } catch (\Throwable $th) {
             $pesan_error = $th->getMessage();
-            var_dump($pesan_error);
-            die;
             return back()->with('error','Data Gagal Ditambahkan');
         }
     }

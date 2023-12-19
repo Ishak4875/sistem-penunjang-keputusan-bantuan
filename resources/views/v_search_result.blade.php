@@ -46,8 +46,8 @@
                 </tbody>
             </table>
             <div class="d-flex justify-content-center">
-              {{ $rangking->links() }}
-          </div>
+                {{$rangking->withQueryString()->links()}}
+            </div>
         </div>
       </div>
     </div>

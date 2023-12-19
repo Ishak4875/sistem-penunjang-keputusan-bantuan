@@ -43,7 +43,7 @@
           <div class="pl-4">
             <h4>Jumlah Penduduk</h4>
             <p class="m-0">
-              100
+              {{$jumlah_penduduk}}
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@
           <div class="pl-4">
             <h4>Pendapatan Tertinggi</h4>
             <p class="m-0">
-              Rp 180000
+              Rp {{$pendapatan_tertinggi}}
             </p>
           </div>
         </div>
@@ -69,7 +69,7 @@
           <div class="pl-4">
             <h4>Pendapatan Terendah</h4>
             <p class="m-0">
-              Rp 2000
+              Rp {{$pendapatan_terendah}}
             </p>
           </div>
         </div>
@@ -106,12 +106,9 @@
                   </tr>
                 </thead>
                 <tbody style="text-align: center">
-                  <?php
-                    $no = 1;  
-                  ?>
-                  @foreach ($masyarakat as $data)
+                  @foreach ($masyarakat as $index => $data)
                     <tr>
-                      <th scope="row">{{$no++}}</th>
+                      <th scope="row">{{$masyarakat->firstItem() + $index}}</th>
                       <td>{{$data->nama}}</td>
                       <td>{{$data->status}}</td>
                       <td>{{$data->gaji_suami}}</td>
