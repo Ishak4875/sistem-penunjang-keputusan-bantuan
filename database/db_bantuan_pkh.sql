@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2023 at 04:12 PM
+-- Generation Time: Dec 19, 2023 at 05:21 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -78,14 +78,14 @@ INSERT INTO `tbl_masyarakat` (`id_masyarakat`, `nama`, `status`, `atap`, `dindin
 (20, 'Hasna Irwan', 'Duda/Janda', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 900, '0.47', '0.00', 'Tidak Bekerja', 'Tidak Bekerja', 0, 0, 0, '1.00', '0.00', '0.00', 2, '1.00', '0.00'),
 (21, 'Bungasia', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 900, '0.47', '0.00', 'Pekerja Swasta', 'Tidak Bekerja', 2000000, 0, 2000000, '1.00', '0.00', '0.00', 1, '1.00', '0.00'),
 (22, 'Mira', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 900, '0.47', '0.00', 'Nahkoda Kapal', 'Tidak Bekerja', 15000000, 0, 15000000, '0.00', '0.00', '1.00', 2, '1.00', '0.00'),
-(23, 'Sarlia Abdullah', 'Lansia', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 450, '1.00', '0.00', 'Tidak Bekerja', 'Pensiunan Guru', 0, 5000000, 5000000, '0.71', '0.00', '0.00', 0, '1.00', '0.00'),
-(24, 'Selly Resa', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 900, '0.47', '0.00', 'Wiraswasta', 'Tidak Bekerja', 3000000, 0, 3000000, '1.00', '0.00', '0.00', 2, '1.00', '0.00'),
-(25, 'Sitti Kusmira', 'Duda/Janda', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 900, '0.47', '0.00', 'Tidak Bekerja', 'PNS', 0, 4, 4, '1.00', '0.00', '0.00', 2, '1.00', '0.00'),
-(26, 'Siti Arpa', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN (Subsidi)', 450, '1.00', '0.00', 'Nelayan', 'Tidak Bekerja', 10000000, 0, 10000000, '0.00', '0.57', '0.71', 2, '1.00', '0.00'),
+(23, 'Sarlia Abdullah', 'Lansia', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 450, '1.00', '0.00', 'Tidak Bekerja', 'Pensiunan Guru', 0, 5000000, 5000000, '0.00', '1.15', '0.48', 0, '1.00', '0.00'),
+(24, 'Selly Resa', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 900, '0.47', '0.00', 'Wiraswasta', 'Tidak Bekerja', 3000000, 0, 3000000, '1.26', '0.00', '0.00', 2, '1.00', '0.00'),
+(25, 'Sitti Kusmira', 'Duda/Janda', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 900, '0.47', '0.00', 'Tidak Bekerja', 'PNS', 0, 4000000, 4000000, '0.39', '0.28', '0.00', 2, '1.00', '0.00'),
+(26, 'Siti Arpa', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN (Subsidi)', 450, '1.00', '0.00', 'Nelayan', 'Tidak Bekerja', 10000000, 0, 10000000, '0.00', '0.00', '1.00', 2, '1.00', '0.00'),
 (27, 'Hartia', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Semen', 'PLN (Subsidi)', 450, '1.00', '0.00', 'Pekerja Lepas', 'Tidak Bekerja', 1500000, 0, 1500000, '1.00', '0.00', '0.00', 1, '1.00', '0.00'),
 (28, 'Yusnia Amir', 'Parobaya', 'Seng Bagus', 'Papan', 'Semen', 'PLN (Subsidi)', 450, '1.00', '0.00', 'Pekerja Lepas', 'Tidak Bekerja', 1500000, 0, 1500000, '1.00', '0.00', '0.00', 2, '1.00', '0.00'),
 (29, 'Ratnadi', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN (Subsidi)', 450, '1.00', '0.00', 'Pekerja Lepas', 'Tidak Bekerja', 1500000, 0, 1500000, '1.00', '0.00', '0.00', 1, '1.00', '0.00'),
-(30, 'Masnia', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 450, '1.00', '0.00', 'Wirausaha', 'Wirausaha', 5000000, 5000000, 10000000, '0.00', '0.57', '0.71', 0, '1.00', '0.00');
+(30, 'Masnia', 'Parobaya', 'Seng Bagus', 'Tembok Bagus', 'Tehel', 'PLN', 450, '1.00', '0.00', 'Wirausaha', 'Wirausaha', 5000000, 5000000, 10000000, '0.00', '0.00', '1.00', 0, '1.00', '0.00');
 
 --
 -- Indexes for dumped tables

@@ -22,7 +22,7 @@
         menyalurkan bantuan Program Keluarga Harapan (PKH)
         kepada orang yang memang membutuhkan dengan baik
       </p>
-      <a href="" class="btn btn-secondary mt-1 py-3 px-5">Lihat Rangking</a>
+      <a href="/masyarakat/rangking" class="btn btn-secondary mt-1 py-3 px-5">Lihat Rangking</a>
     </div>
     <div class="col-lg-6 text-center text-lg-right">
       <img class="img-fluid mt-5 animated slideInRight" src="{{asset('gambar/')}}/penerima bantuan.png" alt="" />
@@ -93,9 +93,9 @@
         <div class="d-flex flex-row-reverse mb-3">
           <a class="btn btn-primary" href="/masyarakat/add" role="button">Tambah</a>
         </div>
-        <div class="card border-0 bg-light shadow-sm pb-2">
+        <div class="card border-0 shadow-sm pb-2">
             <table class="table">
-                <thead class="thead-light">
+                <thead class="thead table-primary" style="text-align: center">
                   <tr>
                     <th scope="col">No.</th>
                     <th scope="col">Nama</th>
@@ -105,7 +105,7 @@
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody style="text-align: center">
                   <?php
                     $no = 1;  
                   ?>

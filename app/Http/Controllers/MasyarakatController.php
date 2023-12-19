@@ -46,6 +46,14 @@ class MasyarakatController extends Controller
         return view('v_edit',$data);
     }
 
+    public function getRangking()
+    {
+        $data = [
+            'rangking'=>$this->MasyarakatModel->getRangking()
+        ];
+        return view('v_rangking',$data);
+    }
+
     public function insert(Request $request)
     {
         $nama = $request->nama;
@@ -95,27 +103,27 @@ class MasyarakatController extends Controller
         }
 
         // total pendapatan
-        if($total_pendapatan <= 4000000){
+        if($total_pendapatan <= 2900000){
             $total_pendapatan_rendah = 1;
-        }else if($total_pendapatan >= 4000000 && $total_pendapatan <= 7500000){
-            $total_pendapatan_rendah = (7500000 - $total_pendapatan)/3500000;
-        }else if($total_pendapatan >= 7500000){
+        }else if($total_pendapatan >= 2900000 && $total_pendapatan <= 4450000){
+            $total_pendapatan_rendah = (4450000 - $total_pendapatan)/1150000;
+        }else if($total_pendapatan >= 4450000){
             $total_pendapatan_rendah = 0;
         }
 
-        if($total_pendapatan <= 5750000 || $total_pendapatan >= 11000000){
+        if($total_pendapatan <= 3675000 || $total_pendapatan >= 6000000){
             $total_pendapatan_sedang = 0;
-        }else if($total_pendapatan >= 5750000 && $total_pendapatan <= 9250000){
-            $total_pendapatan_sedang = ($total_pendapatan - 5750000)/3500000;
-        }else if($total_pendapatan >= 9250000 && $total_pendapatan <= 11000000){
-            $total_pendapatan_sedang = (11000000 - $total_pendapatan)/1750000;
+        }else if($total_pendapatan >= 3675000 && $total_pendapatan <= 5225000){
+            $total_pendapatan_sedang = ($total_pendapatan - 3675000)/1150000;
+        }else if($total_pendapatan >= 5225000 && $total_pendapatan <= 6000000){
+            $total_pendapatan_sedang = (6000000 - $total_pendapatan)/775000;
         }
 
-        if($total_pendapatan <= 7500000){
+        if($total_pendapatan <= 4450000){
             $total_pendapatan_tinggi = 0;
-        }else if($total_pendapatan >= 7500000 && $total_pendapatan <= 11000000){
-            $total_pendapatan_tinggi = ($total_pendapatan - 7500000)/3500000;
-        }else if($total_pendapatan >= 11000000){
+        }else if($total_pendapatan >= 4450000 && $total_pendapatan <= 6000000){
+            $total_pendapatan_tinggi = ($total_pendapatan - 4450000)/1150000;
+        }else if($total_pendapatan >= 6000000){
             $total_pendapatan_tinggi = 1;
         }
 
@@ -221,27 +229,27 @@ class MasyarakatController extends Controller
         }
 
         // total pendapatan
-        if($total_pendapatan <= 4000000){
+        if($total_pendapatan <= 2900000){
             $total_pendapatan_rendah = 1;
-        }else if($total_pendapatan >= 4000000 && $total_pendapatan <= 7500000){
-            $total_pendapatan_rendah = (7500000 - $total_pendapatan)/3500000;
-        }else if($total_pendapatan >= 7500000){
+        }else if($total_pendapatan >= 2900000 && $total_pendapatan <= 4450000){
+            $total_pendapatan_rendah = (4450000 - $total_pendapatan)/1150000;
+        }else if($total_pendapatan >= 4450000){
             $total_pendapatan_rendah = 0;
         }
 
-        if($total_pendapatan <= 5750000 || $total_pendapatan >= 11000000){
-            $total_pendapatan_sedang = 1;
-        }else if($total_pendapatan >= 5750000 && $total_pendapatan <= 9250000){
-            $total_pendapatan_sedang = ($total_pendapatan - 5750000)/3500000;
-        }else if($total_pendapatan >= 9250000 && $total_pendapatan <= 11000000){
-            $total_pendapatan_sedang = (11000000 - $total_pendapatan)/1750000;
+        if($total_pendapatan <= 3675000 || $total_pendapatan >= 6000000){
+            $total_pendapatan_sedang = 0;
+        }else if($total_pendapatan >= 3675000 && $total_pendapatan <= 5225000){
+            $total_pendapatan_sedang = ($total_pendapatan - 3675000)/1150000;
+        }else if($total_pendapatan >= 5225000 && $total_pendapatan <= 6000000){
+            $total_pendapatan_sedang = (6000000 - $total_pendapatan)/775000;
         }
 
-        if($total_pendapatan <= 7500000){
+        if($total_pendapatan <= 4450000){
             $total_pendapatan_tinggi = 0;
-        }else if($total_pendapatan >= 7500000 && $total_pendapatan <= 11000000){
-            $total_pendapatan_tinggi = ($total_pendapatan - 7500000)/3500000;
-        }else if($total_pendapatan >= 11000000){
+        }else if($total_pendapatan >= 4450000 && $total_pendapatan <= 6000000){
+            $total_pendapatan_tinggi = ($total_pendapatan - 4450000)/1150000;
+        }else if($total_pendapatan >= 6000000){
             $total_pendapatan_tinggi = 1;
         }
 
@@ -291,6 +299,8 @@ class MasyarakatController extends Controller
             return redirect()->route('home')->with('success','Data Berhasil Diperabarui');
         } catch (\Throwable $th) {
             $pesan_error = $th->getMessage();
+            var_dump($pesan_error);
+            die;
             return back()->with('error','Data Gagal Diperbarui');
         }
     }

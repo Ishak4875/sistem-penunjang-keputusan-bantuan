@@ -90,7 +90,7 @@
                 >
                   <option value="Listrik">Listrik</option>
                   <option value="PLN" {{$masyarakat->listrik == 'PLN' ? 'selected' : ''}}>PLN</option>
-                  <option value="PLN (Pulsa)" {{$masyarakat->listrik == 'PLN (Pulsa)' ? 'selected' : ''}}>PLN (Pulsa)</option>
+                  <option value="PLN (Subsidi)" {{$masyarakat->listrik == 'PLN (Subsidi)' ? 'selected' : ''}}>PLN (Subsidi)</option>
                   <option value="Pulsa" {{$masyarakat->listrik == 'Pulsa' ? 'selected' : ''}}>Pulsa</option>
                 </select>
               </div>
@@ -116,11 +116,11 @@
               </div>
               <div class="form-group">
                 <input
-                  name="pekerjaan_suami"
+                  name="pekerjaan_istri"
                   type="text"
                   value="{{$masyarakat->pekerjaan_istri}}"
                   class="form-control border-0 p-4"
-                  placeholder="Pekerjaan Suami"
+                  placeholder="Pekerjaan Istri"
                   required="required"
                 />
               </div>

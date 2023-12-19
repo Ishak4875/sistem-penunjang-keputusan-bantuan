@@ -21,3 +21,4 @@ Route::get('/masyarakat/detail/{id_masyarakat}',[MasyarakatController::class,'ge
 Route::get('/masyarakat/edit/{id_masyarakat}',[MasyarakatController::class,'displayPageEdit']);
 Route::post('/masyarakat/update/{id_masyarakat}',[MasyarakatController::class,'update']);
 Route::get('/masyarakat/delete/{id_masyarakat}',[MasyarakatController::class,'delete']);
+Route::get('/masyarakat/rangking',[MasyarakatController::class,'getRangking']);
