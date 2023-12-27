@@ -35,7 +35,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Status">Status</option>
+                  <option value="Status">-Pilih Status-</option>
                   <option value="Muda" {{$masyarakat->status == 'Muda' ? 'selected' : ''}}>Muda</option>
                   <option value="Parobaya" {{$masyarakat->status == 'Parobaya' ? 'selected' : ''}}>Parobaya</option>
                   <option value="Lansia" {{$masyarakat->status == 'Lansia' ? 'selected' : ''}}>Lansia</option>
@@ -48,7 +48,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Atap">Atap</option>
+                  <option value="Atap">-Pilih Atap-</option>
                   <option value="Seng Bagus" {{$masyarakat->atap == 'Seng Bagus' ? 'selected' : ''}}>Seng Bagus</option>
                   <option value="Seng Karatan" {{$masyarakat->atap == 'Seng Karatan' ? 'selected' : ''}}>Seng Karatan</option>
                 </select>
@@ -59,7 +59,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Dinding">Dinding</option>
+                  <option value="Dinding">-Pilih Dinding-</option>
                   <option value="Tembok Kualitas Rendah" {{$masyarakat->dinding == 'Tembok Kualitas Rendah' ? 'selected' : ''}}>Tembok Kualitas Rendah</option>
                   <option value="Asbes" {{$masyarakat->dinding == 'Asbes' ? 'selected' : ''}}>Asbes</option>
                   <option value="Tembok Bagus" {{$masyarakat->dinding == 'Tembok Bagus' ? 'selected' : ''}}>Tembok Bagus</option>
@@ -75,7 +75,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Lantai">Lantai</option>
+                  <option value="Lantai">-Pilih Lantai-</option>
                   <option value="Semen" {{$masyarakat->lantai == 'Semen' ? 'selected' : ''}}>Semen</option>
                   <option value="Tanah" {{$masyarakat->lantai == 'Tanah' ? 'selected' : ''}}>Tanah</option>
                   <option value="Tehel" {{$masyarakat->lantai == 'Tehel' ? 'selected' : ''}}>Tehel</option>
@@ -88,7 +88,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Listrik">Listrik</option>
+                  <option value="Listrik">-Pilih Listrik-</option>
                   <option value="PLN" {{$masyarakat->listrik == 'PLN' ? 'selected' : ''}}>PLN</option>
                   <option value="PLN (Subsidi)" {{$masyarakat->listrik == 'PLN (Subsidi)' ? 'selected' : ''}}>PLN (Subsidi)</option>
                   <option value="Pulsa" {{$masyarakat->listrik == 'Pulsa' ? 'selected' : ''}}>Pulsa</option>

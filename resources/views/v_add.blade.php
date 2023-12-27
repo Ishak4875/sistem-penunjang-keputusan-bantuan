@@ -34,7 +34,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Status">Status</option>
+                  <option value="Status">-Pilih Status-</option>
                   <option value="Muda">Muda</option>
                   <option value="Parobaya">Parobaya</option>
                   <option value="Lansia">Lansia</option>
@@ -47,7 +47,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Atap">Atap</option>
+                  <option value="Atap">-Pilih Atap-</option>
                   <option value="Seng Bagus">Seng Bagus</option>
                   <option value="Seng Karatan">Seng Karatan</option>
                 </select>
@@ -58,7 +58,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Dinding">Dinding</option>
+                  <option value="Dinding">-Pilih Dinding-</option>
                   <option value="Tembok Kualitas Rendah">Tembok Kualitas Rendah</option>
                   <option value="Asbes">Asbes</option>
                   <option value="Tembok Bagus">Tembok Bagus</option>
@@ -74,7 +74,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Lantai">Lantai</option>
+                  <option value="Lantai">-Pilih Lantai-</option>
                   <option value="Semen">Semen</option>
                   <option value="Tanah">Tanah</option>
                   <option value="Tehel">Tehel</option>
@@ -87,7 +87,7 @@
                   class="custom-select border-0 px-4"
                   style="height: 47px"
                 >
-                  <option value="Listrik">Listrik</option>
+                  <option value="Listrik">-Pilih Listrik-</option>
                   <option value="PLN">PLN</option>
                   <option value="PLN (Subsidi)">PLN (Subsidi)</option>
                   <option value="Pulsa">Pulsa</option>
