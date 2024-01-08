@@ -13,7 +13,8 @@
     <div class="row">
       <div class="col mb-5">
         <div class="card border-0 shadow-sm pb-2">
-            <table class="table">
+          <div class="table-responsive">
+              <table class="table">
                 <thead class="thead table-primary" style="text-align: center">
                   <tr>
                     <th scope="col">No.</th>
@@ -45,6 +46,7 @@
                   @endforeach
                 </tbody>
             </table>
+          </div>
             <div class="d-flex justify-content-center">
               {{ $rangking->links() }}
           </div>

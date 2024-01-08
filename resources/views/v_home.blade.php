@@ -94,7 +94,8 @@
           <a class="btn btn-primary" href="/masyarakat/add" role="button">Tambah</a>
         </div>
         <div class="card border-0 shadow-sm pb-2">
-            <table class="table">
+          <div class="table-responsive">
+              <table class="table">
                 <thead class="thead table-primary" style="text-align: center">
                   <tr>
                     <th scope="col">No.</th>
@@ -124,6 +125,8 @@
                   @endforeach
                 </tbody>
             </table>
+          </div>
+
             <div class="d-flex justify-content-center">
               {{$masyarakat->links()}}
             </div>
